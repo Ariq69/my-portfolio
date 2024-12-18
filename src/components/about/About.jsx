@@ -13,7 +13,7 @@ const About = () => {
             <img src={AboutImg} alt="" className="about__img" />
             <div className="about__data">
                 <Info />
-                <p className="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iste! Veniam, magni voluptate ullam ad odio quisquam voluptatibus non consectetur. Voluptatum, quaerat molestiae accusamus dicta ipsa molestias accusantium alias sed.</p>
+                <p className="about__description">I am Muhammad Ariq, a web developer with a strong foundation in creating dynamic and responsive websites. With experience in both front-end and back-end development, I specialize in building user-friendly applications using modern frameworks and tools. My passion lies in solving complex problems, optimizing processes, and delivering innovative solutions that meet user needs. I am eager to contribute my skills to impactful projects and continuously grow in the ever-evolving tech industry.</p>
                 <a download="" href={CV} className="button button--flex">Download My CV
                 <svg
                 class="button__icon"

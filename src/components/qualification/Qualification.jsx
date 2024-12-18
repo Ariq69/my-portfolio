@@ -24,10 +24,10 @@ const Qualification = () => {
                 <div className={toggleState === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
                     <div className="qualification__data">
                         <div>
-                            <h3 className="qualification__title">Web Design</h3>
-                            <span className="qualification__subtitle">Spain - Institute</span>
+                            <h3 className="qualification__title">MAN 2 Jakarta</h3>
+                            <span className="qualification__subtitle">Science Departement</span>
                             <div className="qualification__calender">
-                                <i className="bx bx-calendar"></i> 2021 - present
+                                <i className="bx bx-calendar"></i> 2017 - 2020
                             </div>
                         </div>
                         <div>
@@ -42,14 +42,14 @@ const Qualification = () => {
                             <span className="qualification__line"></span>
                         </div>
                         <div>
-                            <h3 className="qualification__title">Art Director</h3>
-                            <span className="qualification__subtitle">Spain - Institute</span>
+                            <h3 className="qualification__title">UIN Syarif Hidayatullah Jakarta</h3>
+                            <span className="qualification__subtitle">Bachelor Informatics Engineering</span>
                             <div className="qualification__calender">
-                                <i className="bx bx-calendar"></i> 2020 - 2021
+                                <i className="bx bx-calendar"></i> 2020 - 2024
                             </div>
                         </div>
                     </div>
-                    <div className="qualification__data">
+                    {/* <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">Web Development</h3>
                             <span className="qualification__subtitle">Spain - Institute</span>
@@ -75,15 +75,15 @@ const Qualification = () => {
                                 <i className="bx bx-calendar"></i> 2017 - 2018
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
                     <div className="qualification__data">
                         <div>
-                            <h3 className="qualification__title">Product Designer</h3>
-                            <span className="qualification__subtitle">Microsoft - Spain</span>
+                            <h3 className="qualification__title">Wordpress Developer Intern</h3>
+                            <span className="qualification__subtitle">MTS Negeri 13 Jakarta</span>
                             <div className="qualification__calender">
-                                <i className="bx bx-calendar"></i> 2021 - present
+                                <i className="bx bx-calendar"></i> Feb 2023 - Aug 2023
                             </div>
                         </div>
                         <div>
@@ -98,14 +98,14 @@ const Qualification = () => {
                             <span className="qualification__line"></span>
                         </div>
                         <div>
-                            <h3 className="qualification__title">UX Designer</h3>
-                            <span className="qualification__subtitle">Apple Inc - Spain</span>
+                            <h3 className="qualification__title">Full Stack Web Developer</h3>
+                            <span className="qualification__subtitle">Rumah Sakit Haji Jakarta</span>
                             <div className="qualification__calender">
-                                <i className="bx bx-calendar"></i> 2020 - 2021
+                                <i className="bx bx-calendar"></i> Sep 2023 - Dec 2023
                             </div>
                         </div>
                     </div>
-                    <div className="qualification__data">
+                    {/* <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">Web Designer</h3>
                             <span className="qualification__subtitle">Figma - Spain</span>
@@ -117,7 +117,7 @@ const Qualification = () => {
                             <span className="qualification__rounder"></span>
                             <span className="qualification__line"></span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
