@@ -16,7 +16,7 @@ export const projectsData = [
     {
       id: 2,
       image: Work2,
-      title: "App movil",
+      title: "Sumare ERP Software Landing Page",
       category: "dummy project",
       link: "https://ariq69.github.io/Encryptix/task1",
       description: "Developed the landing page for the Sumare ERP Software project using HTML, CSS, and JavaScript.",
