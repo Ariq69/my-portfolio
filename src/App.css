@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 :root {
   --header-height: 3rem;
@@ -46,7 +46,7 @@
   --z-modal: 1000;
 }
 
-  /* RESPOSIVE TYPOGRAPHY */
+/* RESPONSIVE TYPOGRAPHY */
 @media screen and (max-width: 992px) {
   :root {
     --big-font-size: 2.75rem;
@@ -70,7 +70,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body, button, input, textarea {
+body,
+button,
+input,
+textarea {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
@@ -80,7 +83,9 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -120,7 +125,8 @@ img {
   margin-bottom: 4rem;
 }
 
-.section__title, .section__subtitle {
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
@@ -159,6 +165,89 @@ img {
   align-items: center;
 }
 
+/* SCROLL REVEAL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 2.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* FIX: transform: none + will-change: auto agar tidak menciptakan
+   containing block baru, sehingga modal position:fixed
+   bisa menutupi seluruh layar */
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Variasi arah (opsional) */
+.reveal--left {
+  transform: translateX(-40px);
+}
+.reveal--left.reveal--visible {
+  transform: none;
+}
+
+.reveal--right {
+  transform: translateX(40px);
+}
+.reveal--right.reveal--visible {
+  transform: none;
+}
+
+.reveal--scale {
+  transform: scale(0.92);
+}
+.reveal--scale.reveal--visible {
+  transform: none;
+}
+
+/* Stagger untuk children (misal grid skill/card) */
+.reveal--visible .reveal-item {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.reveal-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.reveal-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.reveal-item:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.reveal-item:nth-child(4) {
+  animation-delay: 0.35s;
+}
+.reveal-item:nth-child(5) {
+  animation-delay: 0.45s;
+}
+
+/* FIX: akhiri dengan transform: none agar tidak menjebak modal */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-item {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ======================= BREAKPOINTS ==================== */
 
 /* LG DEVICE */
@@ -190,13 +279,12 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-
 }
 
 /* S DEVICE */
 @media screen and (max-width: 350px) {
   :root {
-    --big-font-size: 2.25rem
+    --big-font-size: 2.25rem;
   }
   .container {
     margin-left: var(--mb-1);

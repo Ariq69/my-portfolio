@@ -1,27 +1,65 @@
-import React from 'react'
+// import React from "react";
 
-const Workitems = ({item}) => {
+// const Workitems = ({ item, onPreview }) => {
+//   return (
+//     <div className="work__card" onClick={onPreview}>
+//       <div className="work__card-top">
+//         <div className="work__img-wrapper">
+//           <img src={item.image} alt={item.title} className="work__img" />
+//           <div className="work__overlay">
+//             <span className="work__preview-btn">
+//               <i className="bx bx-show"></i> Preview
+//             </span>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="work__card-bottom">
+//         <h3 className="work__title">{item.title}</h3>
+//         <p className="work__desc">{item.description}</p>
+
+//         <div className="work__footer">
+//           <span className="work__date">{item.date || "—"}</span>
+//           <span className="work__button">
+//             Details <i className="bx bx-right-arrow-alt work__button-icon"></i>
+//           </span>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Workitems;
+import React from "react";
+
+const Workitems = ({ item, onPreview }) => {
   return (
-    <div className="work__card" key={item.id}>
-        <img src={item.image} alt="" className='work__img'/>
+    <div className="work__card" onClick={onPreview}>
+      <div className="work__card-top">
+        <div className="work__img-wrapper">
+          {/* <img src={item.images[0]} alt={item.title} className="work__img" /> */}
+          <img src={item.image?.[0]} alt={item.title} className="work__img" />
+          <div className="work__overlay">
+            <span className="work__preview-btn">
+              <i className="bx bx-show"></i> Preview
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="work__card-bottom">
         <h3 className="work__title">{item.title}</h3>
         <p className="work__desc">{item.description}</p>
-        <a href={item.link} target='_blank' className="work__button">
-            Github <i className="bx bx-right-arrow-alt work__button-icon"></i>
-        </a>
-        {/* <div className="workitems__modal active__modal">
-            <div className="worktitems__modal-content">
-                <i className="uil uil-times workitems__modal-close"></i>
-                <img src={item.image} alt="" />
-                <h3 className="workitems__modal-tittle">{item.title}</h3>
-                <p className="workitems__modal-description">{item.description}</p>
-                <a href={item.link} className="work__button">
-                    View in github <i className="bx bx-right-arrow-alt work__button-icon"></i>
-                </a>
-            </div>
-        </div> */}
-    </div>
-  )
-}
 
-export default Workitems
+        <div className="work__footer">
+          <span className="work__date">{item.date || "—"}</span>
+          <span className="work__button">
+            Details <i className="bx bx-right-arrow-alt work__button-icon"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Workitems;
