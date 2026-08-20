@@ -34,7 +34,6 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        {/* <a href="index.html" className="nav__logo">MASH</a> */}
         <a href="index.html" className="nav__logo">
           {"MASH".split("").map((letter, index) => (
             <span
@@ -86,11 +85,6 @@ const Header = () => {
                 <i className="uil uil-file-alt nav__icon"></i>Skills
               </a>
             </li>
-            {/* <li className="nav__item">
-                          <a href="#services" className={activeLink === "#services" ? "nav__link active-link" : "nav__link"} onClick={() => handleSetActiveLink("#services")}>
-                              <i className="uil uil-briefcase-alt nav__icon"></i>Services
-                          </a>
-                      </li> */}
             <li className="nav__item">
               <a
                 href="#portfolio"
