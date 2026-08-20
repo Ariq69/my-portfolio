@@ -120,6 +120,36 @@
   margin-bottom: 0.5rem;
 }
 
+.workitems__modal-img-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 25%,
+    rgba(0, 0, 0, 0.1) 37%,
+    rgba(0, 0, 0, 0.05) 63%
+  );
+  background-size: 400% 100%;
+  animation: modal-img-shimmer 1.4s ease infinite;
+}
+
+@keyframes modal-img-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* .workitems__modal-img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+} */
+.workitems__modal-img.is-loaded {
+  opacity: 1;
+}
+
 /* scrollbar tipis biar ga norak */
 .workitems__modal-content::-webkit-scrollbar {
   width: 6px;
@@ -161,6 +191,8 @@
   border-radius: 0.85rem;
   margin-bottom: 1.5rem;
   background-color: rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .workitems__modal-category {
