@@ -5,7 +5,9 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const Work = () => {
   const [ref, isVisible] = useScrollReveal({
-    threshold: 0.3,
+    // threshold: 0.3,
+    threshold: 0.05, // small enough to trigger on tall stacked content
+    rootMargin: "0px", // remove the negative bottom margin, or make it responsive
     triggerOnce: false,
   });
   return (

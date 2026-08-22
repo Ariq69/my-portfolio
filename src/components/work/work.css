@@ -453,9 +453,10 @@
 }
 
 /* MD DEVICE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
   .work__container {
-    grid-template-columns: max-content;
+    /* grid-template-columns: max-content; */
+    grid-template-columns: repeat(2, 350px);
   }
 }
 
